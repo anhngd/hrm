@@ -13,7 +13,7 @@ RUN apt-get update; \
         gnupg \
         gnupg2 \
         gnupg1
-
+RUN apt-get install libonig-dev
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install pdo
