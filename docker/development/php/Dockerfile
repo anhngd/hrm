@@ -22,6 +22,7 @@ RUN docker-php-ext-install tokenizer
 RUN docker-php-ext-install gd
 #RUN docker-php-ext-install mcrypt
 RUN docker-php-ext-install pcntl
+RUN docker-php-ext-configure zip --with-libzip
 RUN docker-php-ext-install zip
 
 # Possible values for docker-php-ext-install:
