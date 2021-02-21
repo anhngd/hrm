@@ -4,7 +4,7 @@ services:
     build: ./docker/development/storage
     entrypoint: /bin/true
     volumes:
-      - ./:/var/www/html
+            - ./:/var/www/html:rw
     network_mode: "bridge"
 
   phpfpm:

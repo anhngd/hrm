@@ -10,6 +10,8 @@ RUN apt-get update; \
         git \
         zlib1g-dev \
         libpng-dev \
+        zip \
+        libzip-dev \
         gnupg \
         gnupg2 \
         gnupg1
@@ -22,7 +24,7 @@ RUN docker-php-ext-install tokenizer
 RUN docker-php-ext-install gd
 #RUN docker-php-ext-install mcrypt
 RUN docker-php-ext-install pcntl
-RUN docker-php-ext-configure zip --with-libzip
+# RUN docker-php-ext-configure zip --with-libzip
 RUN docker-php-ext-install zip
 
 # Possible values for docker-php-ext-install:
